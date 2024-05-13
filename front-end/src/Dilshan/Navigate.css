@@ -1,0 +1,22 @@
+.navbar-nav {
+    display: flex;
+    justify-content: space-between; /* Items will be evenly distributed */
+    width: 100%; /* Ensures the navbar items span the full width */
+  }
+  
+  .nav-item {
+    flex: 2; /* Each nav item will take equal space */
+  }
+  
+  .nav-link {
+    padding: 5 1rem; /* Add padding to each nav link */
+  }
+  
+ .navbar-brand {
+    padding: 20px;
+  
+ }
+ .navbar {
+    width: 100vw;
+  }
+  
