@@ -1,22 +1,65 @@
-.navbar-nav {
-    display: flex;
-    justify-content: space-between; /* Items will be evenly distributed */
-    width: 100%; /* Ensures the navbar items span the full width */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  margin: 0;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+
+  margin-left: 30px;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
   }
-  
-  .nav-item {
-    flex: 2; /* Each nav item will take equal space */
+  .topnav a.icon {
+    float: right;
+    display: block;
   }
-  
-  .nav-link {
-    padding: 5 1rem; /* Add padding to each nav link */
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
   }
-  
- .navbar-brand {
-    padding: 20px;
-  
- }
- .navbar {
-    width: 100vw;
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
+}
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+.xx {
+  margin-left: 30px;
   
+}
+
+
+
