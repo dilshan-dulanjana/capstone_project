@@ -76,7 +76,7 @@ export default function Navigate() {
           <div className="row justify-content-center">
             <div className="col-md-6">
               <form className="input-group">
-                <input type="text" className="form-control" style={{ maxWidth: '500px' }} placeholder="Search" aria-label="search" />
+                <input type="text" className="form-control" style={{ maxWidth: '500px' }} placeholder="Search Travel Place" aria-label="search" />
                 <button className="btn btn-outline-success" type="submit">Search</button>
               </form>
             </div>
@@ -84,7 +84,7 @@ export default function Navigate() {
         </div>
       </div>
 
-
+      <br /> <br />
     </div>
   );
 }

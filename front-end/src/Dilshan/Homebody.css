@@ -1,0 +1,44 @@
+.famousplace {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+    text-align: center; 
+  }
+  
+  .famousplace h1 {
+    max-width: 100%; 
+    margin: 0 auto; 
+  }
+
+  .card{
+
+    margin: 20px;
+  }
+
+  .text1{
+
+    font-family: Poetsen One;
+    font-size: 60px;
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+  }
+
+  .text2{
+    font-family: Radio Canada;
+    font-size: 30px;
+    font-weight: 100;
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+
+  }
+
+  .text4{
+
+    
+    font-family: Radio Canada;
+    font-size: 30px;
+  }
+

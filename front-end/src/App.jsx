@@ -1,4 +1,5 @@
-import Navigate from './Dilshan/Navigate'
+import Home from './Dilshan/Home';
+
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
   <div>
 
 
-    <Navigate />
+  <Home></Home>
 
   </div>
   )
