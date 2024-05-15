@@ -1,3 +1,4 @@
+import Footer from './Footer'
 import Homebody from './Homebody'
 import Navigate from './Navigate'
 
@@ -11,6 +12,7 @@ function Home(){
 
             <Navigate></Navigate>
             <Homebody></Homebody>
+            <Footer></Footer>
         </div>
     )
 }

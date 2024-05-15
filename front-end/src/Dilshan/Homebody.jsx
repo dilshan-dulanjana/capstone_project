@@ -17,6 +17,39 @@ import Au from "../assets/YU.webp";
 import Sl from "../assets/sl.webp";
 import we from "../assets/we.jpg";
 import po from "../assets/po.jpg";
+import Asalap from "../assets/Asalap.png";
+import vesak from "../assets/vesak.png";
+import Devali from "../assets/Devali.png";
+import Newyear from "../assets/Newyear.png";
+import Nallur from "../assets/Nallur.png";
+import travelAgent from "../assets/Travel-Agent.webp";
+import visa from "../assets/Applyvisa.jpg";
+import bookflight from "../assets/bookflight.jpg";
+import hotel from "../assets/hotel.jpg";
+import transpot from "../assets/02.jpg";
+import camp from "../assets/camp.jpg";
+import weather from "../assets/wether.jpeg";
+import blacklist from "../assets/blacklist.png";
+import perahara from "../assets/perahara.jpg";
+
+import React, { useEffect } from 'react';
+
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import { Carousel } from 'bootstrap'; // Import Bootstrap Carousel component
+function YourComponent() {
+    useEffect(() => {
+        const carousel = document.querySelector('#carouselExample');
+        const carouselInstance = new Carousel(carousel, {
+            interval: 2000, // Set the interval to 3 seconds (3000 milliseconds)
+            wrap: true // Allow the carousel to loop continuously
+        });
+    }, []);
+
+    return null; // Since this is not rendering anything, just returning null
+}
+
+
+
 function Homebody() {
 
 
@@ -56,7 +89,7 @@ function Homebody() {
                         </div>
                     </div>
                 </div>
-                <div className="row justify-content-center"  data-aos="zoom-in-down">
+                <div className="row justify-content-center" data-aos="zoom-in-down">
                     <div className="card col-md-12 mx-auto" style={{ maxWidth: '40rem' }}>
                         <img src={we} className="card-img-top img-fluid" alt="" />
                         <div className="card-body">
@@ -205,23 +238,136 @@ function Homebody() {
                 </div>
             </div>
 
-            <br />
+            <br /><br /><br />
+            <div className="events-container" >
+                <h2 className="events-title">Upcoming Events & Festivals</h2>
+                <div id="carouselExample" className="carousel slide" style={{ width: "500px", height: "500px", margin: "auto" }} data-aos="zoom-in-up">
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
+                            <img src={Asalap} className="d-block w-100" alt="..." />
+                            <h3 className="c-text">Esala Perahera </h3>
+                        </div>
+                        <div className="carousel-item" >
+                            <img src={vesak} className="d-block w-100" alt="..." />
+                            <h3 className="c-text">Vesak Festival </h3>
+                        </div>
+                        <div className="carousel-item">
+                            <img src={Devali} className="d-block w-100" alt="..." />
+                            <h3 className="c-text">Deepavali Festival </h3>
+                        </div>
+                        <div className="carousel-item">
+                            <img src={Newyear} className="d-block w-100" alt="..." />
+                            <h3 className="c-text">Sinhala And Tamil New Year </h3>
+                        </div>
+                        <div className="carousel-item">
+                            <img src={Nallur} className="d-block w-100" alt="..." />
+                            <h3 className="c-text">Nallur Festival In Sri Lanka </h3>
+                        </div>
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+            <br /><br />
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-outline-info custom-btn-width">See More Events</button>
+            </div>
+
+
+            <br /><br />
+
             <div className="famousplace">
                 <h1 className="text1">Plane Your Dream Holiday</h1>
             </div>
 
             <br /><br />
-
-            <div className="bg-dark">
-
-                <figure className="figure">
-                    <img src={galle} className="figure-img img-fluid rounded" style={{ width: '300px', height: '300px' }} alt="..." />
-                    <figcaption className="figure-caption text-end">A caption for the above image.</figcaption>
-                </figure>
-
-
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mx-auto" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <figure className="figure custom-figure-padding">
+                            <img src={travelAgent} className="figure-img img-fluid rounded custom-img" alt="..." />
+                            <figcaption className="figure-caption text-center"><h2 className="c-text">Find A Travel Agent</h2></figcaption>
+                        </figure>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mx-auto" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <figure className="figure custom-figure-padding">
+                            <img src={visa} className="figure-img img-fluid rounded custom-img" alt="..." />
+                            <figcaption className="figure-caption text-center"><h2 className="c-text">Apply Visa Online</h2></figcaption>
+                        </figure>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mx-auto" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <figure className="figure custom-figure-padding">
+                            <img src={bookflight} className="figure-img img-fluid rounded custom-img" alt="..." />
+                            <figcaption className="figure-caption text-center"><h2 className="c-text">Book A Flight</h2></figcaption>
+                        </figure>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mx-auto" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <figure className="figure custom-figure-padding">
+                            <img src={hotel} className="figure-img img-fluid rounded custom-img" alt="..." />
+                            <figcaption className="figure-caption text-center"><h2 className="c-text">Accommodations</h2></figcaption>
+                        </figure>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mx-auto" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <figure className="figure custom-figure-padding">
+                            <img src={transpot} className="figure-img img-fluid rounded custom-img" alt="..." />
+                            <figcaption className="figure-caption text-center"><h2 className="c-text">Transport Service</h2></figcaption>
+                        </figure>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mx-auto" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <figure className="figure custom-figure-padding">
+                            <img src={camp} className="figure-img img-fluid rounded custom-img" alt="..." />
+                            <figcaption className="figure-caption text-center"><h2 className="c-text">Camping Sites</h2></figcaption>
+                        </figure>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mx-auto" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <figure className="figure custom-figure-padding">
+                            <img src={weather} className="figure-img img-fluid rounded custom-img" alt="..." />
+                            <figcaption className="figure-caption text-center"><h2 className="c-text">Weather Forecast</h2></figcaption>
+                        </figure>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mx-auto" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <figure className="figure custom-figure-padding">
+                            <img src={blacklist} className="figure-img img-fluid rounded custom-img" alt="..." />
+                            <figcaption className="figure-caption text-center"><h2 className="c-text">Blacklist Service Providers</h2></figcaption>
+                        </figure>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mx-auto" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
+                        <figure className="figure custom-figure-padding">
+                            <img src={perahara} className="figure-img img-fluid rounded custom-img" alt="..." />
+                            <figcaption className="figure-caption text-center"><h2 className="c-text">Upcoming Events</h2></figcaption>
+                        </figure>
+                    </div>
+                </div>
             </div>
+
+            <br /><br />
         </div>
+
 
     )
 }
