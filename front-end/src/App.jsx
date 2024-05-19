@@ -1,4 +1,8 @@
-import Home from './Dilshan/Home';
+// import Home from "./Dilshan/Home"
+import Signup from "./Dilshan/Signup"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 
 function App() {
@@ -7,9 +11,9 @@ function App() {
   
   return (
   <div>
+   <Signup/>
 
 
-  <Home></Home>
 
   </div>
   )
