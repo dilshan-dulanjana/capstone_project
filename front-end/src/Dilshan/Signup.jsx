@@ -6,10 +6,31 @@ import Footer from './Footer';
 
 function Signup() {
   const [validated, setValidated] = useState(false);
+  const [email, setEmail] = useState('');
+  const [isValid, setIsValid] = useState(null);
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [passwordMatch, setPasswordMatch] = useState(true);
+
+  const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+    setIsValid(emailRegex.test(event.target.value));
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleConfirmPasswordChange = (event) => {
+    setConfirmPassword(event.target.value);
+    setPasswordMatch(event.target.value === password);
+  };
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
-    if (form.checkValidity() === false) {
+    if (form.checkValidity() === false || !isValid || !passwordMatch) {
       event.preventDefault();
       event.stopPropagation();
     }
@@ -47,10 +68,10 @@ function Signup() {
         <div style={{ backgroundImage: `url(${signupimg})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh', display: 'flex', alignItems: 'center', padding: '10px' }}>
           <Row style={{ width: '100%' }}>
             <Col xs={12} md={4} sm={12} style={{ display: "flex", justifyContent: "center", padding: "10px" }}>
-              {/* Background image is already set in the parent div, no need to set it here */}
+           
             </Col>
             <Col xs={12} md={8} sm={12} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-              <Form noValidate validated={validated} style={{ padding: "50px", backgroundColor: "#FFFFFF", borderRadius: "20px", boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }} onSubmit={handleSubmit}>
+              <Form onSubmit={handleSubmit} noValidate validated={validated} style={{ padding: "50px", backgroundColor: "#FFFFFF", borderRadius: "20px", boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
                 <Row className="mb-3">
                   <Col md={12}>
                     <Form.Group controlId="validationCustom01" style={{ width: "100%" }}>
@@ -82,7 +103,7 @@ function Signup() {
                     </Form.Group>
                   </Col>
                   <Col md={12}>
-                    <Form.Group controlId="validationCustomUsername" style={{ width: "100%" }}>
+                    <Form.Group controlId="validationCustomUsername" style={{ width: '100%' }}>
                       <Form.Label>Email :</Form.Label>
                       <InputGroup hasValidation>
                         <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
@@ -91,6 +112,9 @@ function Signup() {
                           placeholder="Email"
                           aria-describedby="inputGroupPrepend"
                           required
+                          value={email}
+                          onChange={handleEmailChange}
+                          isInvalid={validated && !isValid}
                         />
                         <Form.Control.Feedback type="invalid">
                           Please enter a valid email.
@@ -103,7 +127,13 @@ function Signup() {
                   <Col md={12}>
                     <Form.Group controlId="validationCustom03" style={{ width: "100%" }}>
                       <Form.Label>Password :</Form.Label>
-                      <Form.Control type="password" placeholder="Enter Your Password" required />
+                      <Form.Control
+                        type="password"
+                        placeholder="Enter Your Password"
+                        required
+                        value={password}
+                        onChange={handlePasswordChange}
+                      />
                       <Form.Control.Feedback type="invalid">
                         Please provide a valid password.
                       </Form.Control.Feedback>
@@ -112,9 +142,16 @@ function Signup() {
                   <Col md={12}>
                     <Form.Group controlId="validationCustom04" style={{ width: "100%" }}>
                       <Form.Label>Confirm Password :</Form.Label>
-                      <Form.Control type="password" placeholder="Confirm Password" required />
+                      <Form.Control
+                        type="password"
+                        placeholder="Confirm Password"
+                        required
+                        value={confirmPassword}
+                        onChange={handleConfirmPasswordChange}
+                        isInvalid={validated && !passwordMatch}
+                      />
                       <Form.Control.Feedback type="invalid">
-                        Please provide a matching password.
+                        Passwords do not match.
                       </Form.Control.Feedback>
                     </Form.Group>
                   </Col>
@@ -125,7 +162,7 @@ function Signup() {
           </Row>
         </div>
       </Container>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }
