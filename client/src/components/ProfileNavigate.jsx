@@ -9,6 +9,7 @@ import { Dropdown } from 'react-bootstrap';
 import profile from "../assets/profile.png";
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
+import Home from './Home';
 
 
 export default function ProfileNavigate() {
@@ -38,7 +39,7 @@ export default function ProfileNavigate() {
     return (
         <div>
             <div className="topnav w-auto" id="myTopnav" style={{ margin: 0 }}>
-                <a href="#home" className="active">Home</a>
+                <a href={Home} className="active">Home</a>
                 <a href="#news" className='xx'>Contact us</a>
                 <a href="#contact" className='xx'>Tourism News</a>
                 <a href="#about" className='xx'>Video Streaming</a>

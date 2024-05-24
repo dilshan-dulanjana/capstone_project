@@ -116,7 +116,7 @@ function Signup() {
                 <Row className="mb-3">
                   <Col md={12}>
                     <Form.Group controlId="validationCustom01" style={{ width: "100%" }}>
-                      <Form.Label>Name :</Form.Label>
+                      <Form.Label>Full Name :</Form.Label>
                       <Form.Control
                         name="name"
                         required
