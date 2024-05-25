@@ -15,7 +15,6 @@
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.3.3",
     "firebase": "^10.12.0",
-    "material-table": "^2.0.5",
     "mdb-react-ui-kit": "^8.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",

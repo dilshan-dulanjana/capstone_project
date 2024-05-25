@@ -36,9 +36,6 @@ import 'aos/dist/aos.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'bootstrap'; // Import Bootstrap Carousel component
-import TanStackTable from "./TanStackTable";
-
-
 function YourComponent() {
     useEffect(() => {
         const carousel = document.querySelector('#carouselExample');
@@ -65,7 +62,7 @@ function Travelerhomebody() {
                 <br />
                 <Row>
                     <Col md={6} xs={12} sm={12}>
-                        <img src={Aubowan} className="img-fluid   " alt="" style={{ maxWidth: '550px', height: 'auto', display: 'inline-block', marginRight: '5px', marginLeft: '5px', padding: "10px" }} data-aos="fade-right" />
+                        <img src={Aubowan} className="img-fluid   " alt="" style={{ maxWidth: '550px', height: 'auto', display: 'inline-block', marginRight: '5px', marginLeft: '5px' ,padding:"10px"}} data-aos="fade-right" />
                     </Col>
                     <Col md={6} xs={12} sm={12}>
                         <img src={Au} className="img-fluid " alt="" style={{ maxWidth: '550px', height: 'auto', display: 'inline-block' }} data-aos="fade-left" />
@@ -89,20 +86,18 @@ function Travelerhomebody() {
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 <Card.Title>Come along and share the adventure with us!</Card.Title>
                             </div>
-                            <div style={{ display: 'flex', justifyContent: 'center', fontSize: "18px" }}>
-                                <Card.Text>
-                                    Join us now and you can earn money. Let's start our Adventure Travel
-                                </Card.Text>
-                            </div>
-                            <Button variant="primary" style={{ width: "100%", padding: "10px" }}>Upload Your Travel Place</Button>
+                           <div  style={{ display: 'flex', justifyContent: 'center',fontSize:"18px" }}>
+                           <Card.Text>
+                            Join us now and you can earn money. Let's start our Adventure Travel
+                            </Card.Text>
+                           </div>
+                            <Button variant="primary" style={{width:"100%" ,padding:"10px"}}>Upload Your Travel Place</Button>
                         </Card.Body>
                     </Card>
                 </Col>
             </Row>
 
-            <br /><br /><br />
-            <TanStackTable/>
-            <br /><br />
+            <br />
             <div className="famousplace">
                 <h1 className="text1">Most Famous Travel Places In Sri Lanka</h1>
 
