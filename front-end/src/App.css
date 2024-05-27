@@ -1,0 +1,22 @@
+<Row>
+        <Col >News Title<b className="star"> *</b></Col>
+        <Col className="title">Title of article</Col>
+      </Row>
+      <Row>
+        <Col >Short Meesage<b className="star"> *</b></Col>
+        <Col className="shortM">Here you will have to type a summery or only the begging of the article. It will appear only on the article list panel.</Col>
+      </Row>
+      <Row>
+        <Col >Full Message<b className="star"> *</b></Col>
+        <Col className="fullM">Here you will have to type the entire article that will appear on a current window</Col>
+      </Row>
+      <Row>
+        <Col >Author<b className="star"> *</b></Col>
+        <Col className="author">Author's name</Col>
+      </Row>
+      <Row>
+      <Col>Image<b className="star"> *</b></Col>
+        <Col xs={5} className="image"></Col>
+        <Col className="button">Browse</Col>
+      </Row>
+     
